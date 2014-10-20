@@ -1,9 +1,13 @@
 package com.wesleyreisz.mymusic;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.wesleyreisz.mymusic.model.Song;
@@ -13,6 +17,8 @@ import java.util.List;
 
 
 public class MyMusicActivity extends Activity {
+    private static final String TAG = "MusicList";
+    private static final String SONG_TITLE = "song_title";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,9 +27,24 @@ public class MyMusicActivity extends Activity {
 
         ListView listView = (ListView) findViewById(R.id.listViewSong);
         List<Song> songs = new MockMusicService().findAll();
-        SongAdapter songAdapter = new SongAdapter(this, R.layout.activity_my_music, songs);
+        final SongAdapter songAdapter = new SongAdapter(this, R.layout.activity_my_music, songs);
         listView.setAdapter(songAdapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                Song song = (Song)songAdapter.getItem(position);
+                Log.d(TAG, "You Clicked on:" + song.getSongTitle());
+
+                Intent intent = new Intent(view.getContext(), SongDetailActivity.class);
+                intent.putExtra(SONG_TITLE, song.getSongTitle());
+                startActivity(intent);
+            }
+        });
     }
+
+
 
 
     @Override
