@@ -1,0 +1,92 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wesleyreisz.mymusic.SongDetailActivity"
+    tools:ignore="MergeRootFrame">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Title"
+        android:id="@+id/textView1"
+        android:textSize="30sp"
+        android:padding="5dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Artist:"
+        android:id="@+id/textView2"
+        android:textSize="25sp"
+        android:padding="50dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Album"
+        android:id="@+id/textView3"
+        android:textSize="25sp"
+        android:paddingTop="50dp"
+        android:paddingLeft="150dp"
+
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Album:"
+        android:id="@+id/textView4"
+        android:textSize="25sp"
+        android:paddingTop="100dp"
+        android:paddingLeft="40dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Album Name"
+        android:id="@+id/textView10"
+        android:textSize="25sp"
+        android:paddingTop="100dp"
+        android:paddingLeft="150dp"
+
+
+        />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date:"
+        android:id="@+id/textView6"
+        android:textSize="25sp"
+        android:paddingTop="150dp"
+        android:paddingLeft="60dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DateDate"
+        android:id="@+id/textView5"
+        android:textSize="25sp"
+        android:paddingTop="150dp"
+        android:paddingLeft="150dp"
+
+
+        />
+
+
+
+</FrameLayout>
+
+
